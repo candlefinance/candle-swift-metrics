@@ -25,8 +25,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import CoreMetrics
-import Metrics
+import CandleCoreMetrics
+import CandleMetrics
 import XCTest
 
 /// A metrics factory which allows you to inspect recorded metrics programmatically.
@@ -253,7 +253,7 @@ extension TestMetrics {
 
     // MARK: - Timer
 
-    public func expectTimer(_ metric: CoreMetrics.Timer) throws -> TestTimer {
+    public func expectTimer(_ metric: CandleCoreMetrics.Timer) throws -> TestTimer {
         guard let timer = metric._handler as? TestTimer else {
             throw TestMetricsError.illegalMetricType(metric: metric._handler, expected: "\(TestTimer.self)")
         }

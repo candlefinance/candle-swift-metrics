@@ -18,25 +18,25 @@ import PackageDescription
 let package = Package(
     name: "swift-metrics",
     products: [
-        .library(name: "CoreMetrics", targets: ["CoreMetrics"]),
-        .library(name: "Metrics", targets: ["Metrics"]),
+        .library(name: "CandleCoreMetrics", targets: ["CandleCoreMetrics"]),
+        .library(name: "CandleMetrics", targets: ["CandleMetrics"]),
         .library(name: "MetricsTestKit", targets: ["MetricsTestKit"]),
     ],
     targets: [
         .target(
-            name: "CoreMetrics"
+            name: "CandleCoreMetrics"
         ),
         .target(
-            name: "Metrics",
-            dependencies: ["CoreMetrics"]
+            name: "CandleMetrics",
+            dependencies: ["CandleCoreMetrics"]
         ),
         .target(
             name: "MetricsTestKit",
-            dependencies: ["Metrics"]
+            dependencies: ["CandleMetrics"]
         ),
         .testTarget(
             name: "MetricsTests",
-            dependencies: ["Metrics", "MetricsTestKit"]
+            dependencies: ["CandleMetrics", "MetricsTestKit"]
         ),
     ]
 )

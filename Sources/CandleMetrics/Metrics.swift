@@ -15,10 +15,10 @@
 // Note: Whitespace changes are used to workaround compiler bug
 // https://github.com/swiftlang/swift/issues/79285
 
-@_exported import CoreMetrics
+@_exported import CandleCoreMetrics
 import Foundation
 
-@_exported import class CoreMetrics.Timer
+@_exported import class CandleCoreMetrics.Timer
 
 extension Timer {
     /// Convenience for measuring duration of a closure.
