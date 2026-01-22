@@ -16,7 +16,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-metrics",
+    name: "candle-swift-metrics",
     products: [
         .library(name: "CandleCoreMetrics", targets: ["CandleCoreMetrics"]),
         .library(name: "CandleMetrics", targets: ["CandleMetrics"]),
