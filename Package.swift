@@ -20,7 +20,6 @@ let package = Package(
     products: [
         .library(name: "CandleCoreMetrics", targets: ["CandleCoreMetrics"]),
         .library(name: "CandleMetrics", targets: ["CandleMetrics"]),
-        .library(name: "MetricsTestKit", targets: ["MetricsTestKit"]),
     ],
     targets: [
         .target(
@@ -29,14 +28,6 @@ let package = Package(
         .target(
             name: "CandleMetrics",
             dependencies: ["CandleCoreMetrics"]
-        ),
-        .target(
-            name: "MetricsTestKit",
-            dependencies: ["CandleMetrics"]
-        ),
-        .testTarget(
-            name: "MetricsTests",
-            dependencies: ["CandleMetrics", "MetricsTestKit"]
         ),
     ]
 )
